@@ -1,7 +1,7 @@
 @extends('/layouts/main-template')
 
 @section('title')
-    Selamat Datang    
+    Kuisoner
 @endsection
 
 @section('content')

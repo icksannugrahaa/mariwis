@@ -38592,14 +38592,7 @@ var render = function() {
       _vm._v(" "),
       _c(
         "v-content",
-        [
-          _c(
-            "v-container",
-            { staticClass: "fill-height", attrs: { fluid: "" } },
-            [_c("router-view")],
-            1
-          )
-        ],
+        [_c("v-container", { attrs: { fluid: "" } }, [_c("router-view")], 1)],
         1
       ),
       _vm._v(" "),
