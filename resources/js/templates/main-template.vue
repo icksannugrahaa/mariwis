@@ -52,6 +52,7 @@
       <v-toolbar-title style="width: 300px" class="ml-0 pl-4">
         <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
         <span class="hidden-sm-and-down">Kuisoner Application</span>
+        <v-progress-linear :active="loading" :indeterminate="loading" absolute bottom color="white"></v-progress-linear>
       </v-toolbar-title>
       <div class="flex-grow-1"></div>
       <v-btn icon large>
@@ -120,6 +121,7 @@ export default {
   data: () => ({
     dialog: false,
     drawer: null,
+    loading: true,
     items: [
       { icon: "mdi-home", text: "Home" },
       {

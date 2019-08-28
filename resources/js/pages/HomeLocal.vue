@@ -1,12 +1,12 @@
 <template>
   <div>
-    <h1>Selamat Datang</h1>
+    <h1>Anda Belum Login</h1>
   </div>
 </template>
 
 <script>
 export default {
-  name: "home"
+  name: "home-local"
 };
 </script>
 

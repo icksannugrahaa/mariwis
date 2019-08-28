@@ -13,7 +13,8 @@
           <h1>Icksan Nugraha</h1>
         </v-card-text>
         <v-card-actions>
-          <v-tooltip right>
+          <LRModal></LRModal>
+          <!-- <v-tooltip right>
             <template v-slot:activator="{ on }">
               <v-btn small color="primary" class="ma-2 white--text" v-on="on">
                 <v-icon small dark>mdi-settings</v-icon>
@@ -28,7 +29,7 @@
               </v-btn>
             </template>
             <span>Logout</span>
-          </v-tooltip>
+          </v-tooltip>-->
         </v-card-actions>
       </v-card>
     </v-list-item>
@@ -36,8 +37,12 @@
 </template>
 
 <script>
+import LRModal from "../pages/Auth/LRModal";
 export default {
-  name: "vue-navigation"
+  name: "vue-navigation",
+  components: {
+    LRModal
+  }
 };
 </script>
 

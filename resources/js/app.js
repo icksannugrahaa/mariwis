@@ -22,8 +22,18 @@ const router = new VueRouter({
     mode: 'history',
 });
 
-Vue.component('example-component', require('./components/ExampleComponent.vue').default);
-Vue.component('template-sidebar', require('./templates/main-template.vue').default);
+router.beforeEach((to, from, next) => {
+    const requiresAuth = to.matched.some(record => record.meta.requiresAuth);
+    const currentUser = store.state.currentUser;
+
+    if (requiresAuth && !currentUser) {
+        next('/');
+    } else if (to.path == '/' && currentUser) {
+        next('/home');
+    } else {
+        next();
+    }
+});
 
 const app = new Vue({
     el: '#app',
