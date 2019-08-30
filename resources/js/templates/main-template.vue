@@ -2,7 +2,7 @@
   <v-app id="inspire">
     <v-navigation-drawer v-model="drawer" :clipped="$vuetify.breakpoint.lgAndUp" app>
       <v-list dense>
-        <Navigation />
+        <Navigation></Navigation>
         <br />
         <template v-for="item in items">
           <v-row v-if="item.heading" :key="item.heading" align="center">
@@ -137,16 +137,26 @@ export default {
         text: "More",
         model: false,
         children: [
-          { text: "Import" },
-          { text: "Export" },
-          { text: "Print" },
-          { text: "Undo changes" },
-          { text: "Other contacts" }
+          { icon: " ", text: "Import" },
+          { icon: " ", text: "Export" },
+          { icon: " ", text: "Print" },
+          { icon: " ", text: "Undo changes" },
+          { icon: " ", text: "Other contacts" }
         ]
       },
       { icon: "mdi-settings", text: "Settings" }
     ]
   }),
+  computed: {
+    currentUser() {
+      return this.$store.getters.currentUser;
+    }
+  },
+  mounted() {
+    this.$nextTick(function() {
+      this.loading = false;
+    });
+  },
   components: {
     Navigation
   }

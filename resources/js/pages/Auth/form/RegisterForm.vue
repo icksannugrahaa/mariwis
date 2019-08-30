@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import login from "../../../helpers/auth";
+import {login} from "../../../helpers/auth";
 
 export default {
   name: "login-form",
