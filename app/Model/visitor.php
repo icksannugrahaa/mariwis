@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Model;
+namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Quiz_Content extends Model
+class visitor extends Model
 {
     //
 }

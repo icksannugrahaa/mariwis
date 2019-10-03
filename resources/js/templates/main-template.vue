@@ -51,7 +51,7 @@
     <v-app-bar :clipped-left="$vuetify.breakpoint.lgAndUp" app color="blue darken-3" dark>
       <v-toolbar-title style="width: 300px" class="ml-0 pl-4">
         <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
-        <span class="hidden-sm-and-down">Kuisoner Application</span>
+        <span class="hidden-sm-and-down">Mari Wisata</span>
         <v-progress-linear :active="loading" :indeterminate="loading" absolute bottom color="white"></v-progress-linear>
       </v-toolbar-title>
       <div class="flex-grow-1"></div>

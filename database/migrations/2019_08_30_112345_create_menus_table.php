@@ -13,11 +13,11 @@ class CreateMenusTable extends Migration
      */
     public function up()
     {
-        Schema::create('menus', function (Blueprint $table) {
+        Schema::create('tb_menu', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->uuid("menu_uuid");
+            $table->uuid("menu_uuid")->unique();
             $table->string("menu_text");
-            $table->string("menu_icon")->nullable();
+            $table->string("menu_icon");
             $table->boolean("menu_children")->default(false);
             $table->string("menu_availability");
             $table->timestamps();
@@ -31,6 +31,6 @@ class CreateMenusTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('menus');
+        Schema::dropIfExists('tb_menu');
     }
 }

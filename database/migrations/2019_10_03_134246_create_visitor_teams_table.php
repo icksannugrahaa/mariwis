@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateQuizContentsTable extends Migration
+class CreateVisitorTeamsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,14 @@ class CreateQuizContentsTable extends Migration
      */
     public function up()
     {
-        Schema::create('quiz_contents', function (Blueprint $table) {
+        Schema::create('tb_visitor_groups', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->uuid('q_id');
-            $table->longText('qc_question');
-            $table->string('qc_answer');
-            $table->uuid('qc_key');
-            $table->string('qc_images');
+            $table->uuid('vg_uuid')->unique();
+            $table->string('vg_number');
+            $table->longText('vg_key')->nullable();
+            $table->string('vg_saldo');
+            $table->string('vg_payment_total');
+            $table->uuid('vg_riw_saldo');
             $table->timestamps();
         });
     }
@@ -31,6 +32,6 @@ class CreateQuizContentsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('quiz__contents');
+        Schema::dropIfExists('tb_visitor_groups');
     }
 }

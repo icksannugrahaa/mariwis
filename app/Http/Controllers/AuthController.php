@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Model\UserUtil;
 
 class AuthController extends Controller
 {
@@ -28,6 +29,10 @@ class AuthController extends Controller
         $credentials = $request->only('email', 'password');
 
         if ($token = $this->guard('api')->attempt($credentials)) {
+            $up_user = UserUtil::where('email', $credentials['email'])->first();
+            $up_user->key = $token;
+            $up_user->save();
+
             return $this->respondWithToken($token);
         }
 

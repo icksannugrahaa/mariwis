@@ -39419,7 +39419,7 @@ var render = function() {
               }),
               _vm._v(" "),
               _c("span", { staticClass: "hidden-sm-and-down" }, [
-                _vm._v("Kuisoner Application")
+                _vm._v("Mari Wisata")
               ]),
               _vm._v(" "),
               _c("v-progress-linear", {
@@ -92927,8 +92927,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /var/www/lavuko.dev/public_html/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /var/www/lavuko.dev/public_html/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /var/www/mariwis.dev/public_html/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /var/www/mariwis.dev/public_html/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

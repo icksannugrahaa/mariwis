@@ -4,7 +4,7 @@ namespace App\Model;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Quiz extends Model
+class UserUtil extends Model
 {
-    //
+    protected $table = 'tb_users';
 }

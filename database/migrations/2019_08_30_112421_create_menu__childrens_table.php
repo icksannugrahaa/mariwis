@@ -13,9 +13,10 @@ class CreateMenuChildrensTable extends Migration
      */
     public function up()
     {
-        Schema::create('menu_childrens', function (Blueprint $table) {
+        Schema::create('tb_menu_childrens', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->uuid("menu_id");
+            $table->uuid("mc_uuid")->unique();
+            $table->string("mc_parent")->nullable();
             $table->string("mc_text");
             $table->string("mc_icon");
             $table->timestamps();
@@ -29,6 +30,6 @@ class CreateMenuChildrensTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('menu__childrens');
+        Schema::dropIfExists('tb_menu_childrens');
     }
 }
